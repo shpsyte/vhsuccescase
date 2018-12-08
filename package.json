@@ -1,0 +1,26 @@
+{
+  "name": "vanhacksuccesscase",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/shpsyte/vhsuccescase.git",
+  "author": "José Luiz <jose.iscosistemas@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon  src/app.js"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.7"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "nunjucks": "^3.1.4",
+    "pg": "^7.7.1",
+    "sequelize": "^4.41.2"
+  }
+}
