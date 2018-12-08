@@ -1,0 +1,13 @@
+
+SequelizeModel:
+  ☐ city
+  ☐ Area
+  ☐ Skill
+
+Dashboard:
+  ☐ Grafh City
+  ☐ Grafh Year
+  ☐ Grafh Skill
+
+
+

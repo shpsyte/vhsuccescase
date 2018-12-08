@@ -1,0 +1,12 @@
+{%  for message in flashSuccess %}
+ <div class="card-panel teal lighten-2">
+     <span class="flow-text white-text">{{message}}</span>
+  </div>
+{% endfor %}
+
+{%  for message in flashError %}
+  <div class="card-panel red darken-2">
+     <h6 class="flow-text white-text text-darken-2">{{message}}</h6>
+  </div>
+{% endfor %}
+

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+ {% include "_partials/head.njk" %}
+ <link rel="stylesheet" href="/style.css" />
+ <body>
+
+ <div class="auth-wrapper">
+      {% block body%} {% endblock%}
+ </div>
+
+   {% include "_partials/javascript.njk" %}
+</body>
+</html>
+
