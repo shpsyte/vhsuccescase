@@ -1,36 +1,37 @@
 {% extends "_layouts/auth.njk" %}
 {% block body %}
-<div class="container">
-  <div class="row">
-    <div class="col s12 m6 offset-m3">
-      <div class="card">
-        <div class="card-content">
-          <span class="card-title black-text">Sign In</span>
-          {% include "_partials/flash.njk" %}
-          <form action="/signin" method="post">
-            <div class="row">
-            <div class="row">
-               <div class="input-field col s12">
-                <i class="material-icons prefix">email</i>
-                <input id="email" name="email" placeholder="Email" required type="email" class="validate">
-                <label for="email">Email</label>
-              </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 offset-m3">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title black-text">Sign In</span>
+                        {% include "_partials/flash.njk" %}
+                        <form action="/signin" method="post">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">email</i>
+                                    <input id="email" name="email" placeholder="Email" required="required" type="email" class="validate">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">vpn_key</i>
+                                    <input id="password" name="password" placeholder="Password" required="required" type="password" class="validate">
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Signin
+                                <i class="material-icons right">send</i>
+                            </button>
+                            <a class="btn waves-effect waves-light" href="/signup">
+                                <i class="material-icons right">verified_user</i>
+                                Create account</a>
+                            <a class="btn waves-effect waves-light" href="/">
+                                Home</a>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-               <div class="input-field col s12">
-                <i class="material-icons prefix">vpn_key</i>
-                <input id="password" name="password" placeholder="Password" required type="password" class="validate">
-                <label for="password">Password</label>
-              </div>
-            </div>
-            <button class="btn waves-effect waves-light" type="submit" name="action">Signin
-              <i class="material-icons right">send</i>
-            </button>
-            <a class="btn waves-effect waves-light" href="/signup">
-            <i class="material-icons right">verified_user</i> Create account</a>
-
-          </form>
-        </div>
-      </div>
-    </div>
-{% endblock %}
+        {% endblock %}

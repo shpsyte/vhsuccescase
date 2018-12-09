@@ -2,29 +2,47 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('area', {
+    return queryInterface.createTable('users', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      description: {
+      name: {
         allowNull: false,
         type: Sequelize.STRING
       },
+      email: {
+        allowNull: false,
+        unique: true,
+        type: Sequelize.STRING
+      },
+      avatar: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      passwordHash: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      provider: {
+        allowNull: false,
+        defaultValue: false,
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
-        allNull: false,
+        allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allNull: false,
+        allowNull: false,
         type: Sequelize.DATE
       }
     })
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('area')
+    return queryInterface.dropTable('users')
   }
 }

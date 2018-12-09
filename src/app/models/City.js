@@ -1,13 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
-  const Area = sequelize.define(
-    'Area',
+  const City = sequelize.define(
+    'City',
     {
       name: DataTypes.STRING
     },
     {
-      tableName: 'area'
+      tableName: 'city'
     }
   )
 
-  return Area
+  return City
 }

@@ -1,16 +1,85 @@
 {% extends "_layouts/default.njk" %}
 
 {% block body %}
-    <div class="container">
-        <div class="section">
-            <div class="row">
-                <div class="col s12 m4">
+{% include "_partials/flash.njk" %}
 
-                {{ user.name }}
-
-
-                </div>
-            </div>
+<div class="row">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Count by Skill</span>
+          <div id="chart_div"></div>
         </div>
+
+      </div>
     </div>
+
+     <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Count by City</span>
+           <div id="chart_city"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+<div class="row">
+    <div class="col s12 m12">
+      <div class="card teal lighten-2">
+        <div class="card-content white-text">
+          <span class="card-title">Hired by Year</span>
+           <div id="chart_year"></div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+<div class="row">
+    <div class="col s12 m12">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Table</span>
+             <table id="tablecity">
+              <thead>
+                  <tr>
+                      <th>City</th>
+                      <th>Skill</th>
+                      <th>Count</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for case in skillCityCounts %}
+                      <tr>
+                          <td>{{case.city}}</td>
+                          <td>{{case.skill}}</td>
+                          <td>{{case.count}}</td>
+                      </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+{% endblock %}
+
+{% block src %}
+  <script src="chart.js"></script>
 {% endblock %}

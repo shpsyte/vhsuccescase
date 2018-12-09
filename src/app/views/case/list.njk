@@ -1,0 +1,42 @@
+{% extends "_layouts/default.njk" %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col 12">
+                    <h1>List</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col 12">
+                    <table id="tablelist">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>City</th>
+                                <th>Area</th>
+                                <th>Skill</th>
+                                <th>Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for case in cases %}
+                                <tr>
+                                    <td>{{case.name}}</td>
+                                    <td>{{case.city.name}}</td>
+                                    <td>{{case.area.name}}</td>
+                                    <td>{{case.skill.name}}</td>
+                                    <td>{{case.year}}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

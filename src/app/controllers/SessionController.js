@@ -22,6 +22,7 @@ class SessionController {
 
   destroy (req, res) {
     // destroy a session e limpa os cookies
+
     req.session.destroy(() => {
       res.clearCookie('root')
       return res.redirect('/')

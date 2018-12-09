@@ -1,0 +1,67 @@
+{% extends "_layouts/default.njk" %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col 12">
+                    <h1>Create Success Case</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col 12">
+                    <form action="/create" method="post">
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <input id="name" name="name" placeholder="Name" required="required" type="text" class="validate">
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <select id="cityId" name="cityId">
+                                    <option value="" disabled="disabled">Choose City</option>
+                                    {% for city in cities %}
+                                        <option value="{{city.id}}">{{city.name}}</option>
+                                    {% endfor %}
+                                </select>
+                                <label>City</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="input-field col s12 m6">
+                                <select id="areaId" name="areaId">
+                                    <option value="" disabled="disabled">Choose Area</option>
+                                    {% for area in areas %}
+                                        <option value="{{area.id}}">{{area.name}}</option>
+                                    {% endfor %}
+                                </select>
+                                <label>Area</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <select id="skillId" name="skillId">
+                                    <option value="" disabled="disabled">Choose Skill</option>
+                                    {% for skill in skills %}
+                                        <option value="{{skill.id}}">{{skill.name}}</option>
+                                    {% endfor %}
+                                </select>
+                                <label>Skill</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <input id="year" name="year" value="2018" placeholder="Year" required="required" type="number" class="validate">
+                                <label for="year">Year</label>
+                            </div>
+                        </div>
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Create
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

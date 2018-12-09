@@ -1,23 +1,27 @@
 <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container">
-       <a href="/" class="brand-logo"><i class="material-icons">cloud</i>Success Case <b>{{user.name}}</b></a>
+       <a href="/" class="brand-logo"><i class="material-icons">cloud</i>SC-vH<b>{{user.name}}</b></a>
 
         {% if (user)  %}
           <ul class="right hide-on-med-and-down">
               <li><a href="/logout">Logout</a></li>
+              <li><a href="/signup">Create Account</a></li>
           </ul>
           {% else %}
           <ul class="right hide-on-med-and-down">
               <li><a href="/signin">Login</a></li>
-              <li><a href="/signup">Create Account</a></li>
           </ul>
         {% endif %}
-        {% if (user.provider === true) %}
-            <ul class="right hide-on-med-and-down">
-              <li><a href="sass.html">Add Case</a></li>
-              <li><a href="badges.html">List</a></li>
-            </ul>
-        {% endif %}
+
+        <ul class="right hide-on-med-and-down">
+            {# {% if (user.provider === true) %}
+            {% endif %} #}
+          <li><a href="/create">Add Case</a></li>
+          <li><a href="/list">List</a></li>
+        </ul>
+
+
+
         <ul id="nav-mobile" class="sidenav">
             <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
             <li><a href="#!">Second Link</a></li>
