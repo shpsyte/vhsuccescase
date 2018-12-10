@@ -6,7 +6,7 @@
   "author": "José Luiz <jose.iscosistemas@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn  src/app.js -e js",
+    "start": "node src/app.js -e js",
     "dev": "nodemon  src/app.js -e js"
   },
   "devDependencies": {
