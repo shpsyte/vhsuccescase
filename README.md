@@ -23,14 +23,21 @@ To install Yarn, it is best to [consult the official documentation](https://yarn
 ```sh
 git clone https://github.com/shpsyte/vhsuccescase
 cd vhsuccessdcase
-yarn cache clean # need to clean every time before installation, see https://github.com/yarnpkg/yarn/issues/480
+yarn cache clean
 yarn
 yarn dev
 ```
 
-## Included Login on Postgree
+> yarn dev using nodemon to rebuild on change js files.. :)
 
-Warning, this is a exemple of working with Node.JS, Nunjucks, Postgree, so, the data can be deleted.
+## Configue Database (Optional)
+
+This project using Sequelize to create tables, so, to create a new DB, just alter the file dtabase.js with
+your credential, and run this comand:
+
+```sh
+npx sequelize db:migrate
+```
 
 ## Built With
 
