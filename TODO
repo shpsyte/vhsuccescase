@@ -1,13 +1,13 @@
 
 SequelizeModel:
-  ☐ city
-  ☐ Area
-  ☐ Skill
+  ✔ city @done(18-12-10 09:23)
+  ✔ Area @done(18-12-10 09:23)
+  ✔ Skill @done(18-12-10 09:23)
 
 Dashboard:
-  ☐ Grafh City
-  ☐ Grafh Year
-  ☐ Grafh Skill
+  ✔ Grafh City @done(18-12-10 09:23)
+  ✔ Grafh Year @done(18-12-10 09:23)
+  ✔ Grafh Skill @done(18-12-10 09:23)
 
 
 
