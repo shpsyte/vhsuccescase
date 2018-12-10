@@ -1,4 +1,4 @@
-# VH Success Case project
+# APP VH Success Case project
 
 This is a OpenSource project to learn NodeJS, Nunjucks, Sequelize and Postgree.
 This project is host on heroku.
@@ -6,7 +6,9 @@ This project is host on heroku.
 ![Heroku](https://heroku-badge.herokuapp.com/?app=vhsuccesscase)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> Note: Usage via Yarn may not work completely yet.
+## Check here
+
+<a href="https://vhsuccesscase.herokuapp.com/" target="_blank">APP - VH Success Case project</a>
 
 # Getting Started
 
@@ -46,6 +48,7 @@ npx sequelize db:migrate
 - [x] [sequelizejs](http://docs.sequelizejs.com/) - Sequelize is a promise-based ORM for Node.js v4 and up
 - [x] [expressjs](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for NodeJS
 - [x] [postgree](https://www.postgresql.org/) - The World's Most Advanced Open Source Relational Database
+- [x] [Google Chart](https://developers.google.com/chart/) - Display live data on your site
 
 # How contribuite
 
