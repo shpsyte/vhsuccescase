@@ -6,7 +6,8 @@
   "author": "José Luiz <jose.iscosistemas@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node  src/app.js -e js"
+    "start": "yarn  src/app.js -e js",
+    "dev": "nodemon  src/app.js -e js"
   },
   "devDependencies": {
     "eslint": "^5.10.0",
@@ -23,8 +24,10 @@
     "connect-flash": "^0.1.1",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
+    "install": "^0.12.2",
     "nunjucks": "^3.1.4",
     "pg": "^7.7.1",
+    "remove": "^0.1.5",
     "sequelize": "^4.41.2",
     "session-file-store": "^1.2.0"
   }

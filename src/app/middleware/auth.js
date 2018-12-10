@@ -4,7 +4,6 @@ module.exports = (req, res, next) => {
     return next()
   }
 
-  // req.flash('error', 'Permission Denied')
-  // return res.redirect('/signin')
-  return next()
+  req.flash('error', 'Permission Denied, only member can be do this...')
+  return res.redirect('/')
 }

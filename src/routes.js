@@ -14,8 +14,7 @@ routes.use('/', MiddlewareAddAuth)
 
 routes.get('/', MiddlewareAddAuth, Dashboard.index)
 
-// routes.get('/signup', MiddlewareAuth, UserController.create)
-routes.get('/signup', UserController.create)
+routes.get('/signup', MiddlewareAuth, UserController.create)
 routes.post('/signup', UserController.store)
 
 routes.get('/signin', SessionController.signin)
@@ -23,7 +22,7 @@ routes.post('/signin', SessionController.store)
 
 routes.get('/logout', SessionController.destroy)
 
-routes.get('/create', MiddlewareAuth, CaseController.index)
+routes.get('/create', MiddlewareAuth, MiddlewareAuth, CaseController.index)
 routes.post('/create', MiddlewareAuth, CaseController.store)
 
 routes.get('/list', CaseController.list)

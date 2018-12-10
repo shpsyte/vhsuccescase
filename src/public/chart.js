@@ -1,4 +1,5 @@
 google.charts.load('current', { packages: ['corechart'] })
+
 google.charts.setOnLoadCallback(drawSkillCount)
 google.charts.setOnLoadCallback(drawCityCount)
 google.charts.setOnLoadCallback(yearCount)
@@ -102,3 +103,9 @@ function yearCount () {
   )
   chart.draw(data, options)
 }
+
+$(window).resize(function () {
+  drawSkillCount()
+  drawCityCount()
+  drawCityCount()()
+})
